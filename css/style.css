@@ -75,21 +75,25 @@ header {
 	background-size: cover;
 }
 
-.etiqueta-izquierda {
-	position: absolute;
-	top: 30%;
-	left: 50%;
-}
-
-.etiqueta-derecha {
-	position: absolute;
-	top: 30%;
+@media only screen and (min-width: 64.063em) { 
+  .description {
+    padding-top: 8em;
+  }
+} 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .description {
+    padding-top: 8em;
+  }
 }
 
 .case-container,
 .label-container {
 	width: 100%;
 	text-align: center;
+}
+
+.label-container {
+  padding-bottom: 3rem;
 }
 
 /*.label h1 {
@@ -127,6 +131,7 @@ header {
   margin-bottom: 1.25rem;
   padding: 1.25rem;
   background: #1ABC9C; }
+  
   .label > :first-child {
     margin-top: 0; }
   .label > :last-child {
@@ -161,3 +166,6 @@ header {
   .label.radius {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
+  .label h1 {
+    padding-bottom: 0;
+  }
