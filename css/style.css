@@ -75,10 +75,15 @@ header {
 	background-size: cover;
 }
 
-.etiqueta {
+.etiqueta-izquierda {
 	position: absolute;
 	top: 30%;
 	left: 50%;
+}
+
+.etiqueta-derecha {
+	position: absolute;
+	top: 30%;
 }
 
 .case-container,
