@@ -75,6 +75,22 @@ header {
 	background-size: cover;
 }
 
+/*Pantallas Medianas*/
+
+@media only screen and (min-width: 40.063em) { 
+ .description {
+    padding-top: 8em;
+  }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+ .description {
+    padding-top: 8em;
+  }
+}
+
+/*Pantallas Grandes y Extra Grandes */
+
 @media only screen and (min-width: 64.063em) { 
   .description {
     padding-top: 8em;
@@ -85,6 +101,7 @@ header {
     padding-top: 8em;
   }
 }
+
 
 .case-container,
 .label-container {
