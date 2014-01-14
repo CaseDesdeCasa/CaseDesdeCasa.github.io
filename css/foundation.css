@@ -31,6 +31,14 @@ body {
   font-size: 100%; }
 
 body {
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   background: white;
   color: #222222;
   padding: 0;
@@ -2903,8 +2911,15 @@ ul.pagination {
       background: white; }
 
 p.lead {
-  font-size: 1.21875rem;
+  /*font-size: 1.21875rem;*/
+  font-size: 1rem;
+  color: #2980B9;
   line-height: 1.6; }
+
+p.sub {
+  font-size: 0.8rem;
+  color: #34495E;
+}
 
 .subheader {
   line-height: 1.4;
@@ -3873,7 +3888,9 @@ blockquote p {
     color: #333333; }
 
 p.lead {
-  font-size: 1.21875rem;
+  /*font-size: 1.21875rem;*/
+  font-size: 1rem;
+  color: #2980B9;
   line-height: 1.6; }
 
 .subheader {
@@ -4203,7 +4220,7 @@ table {
 
 /* Standard Forms */
 form {
-  margin: 0 0 1rem; }
+  margin: 0 0 0; }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {

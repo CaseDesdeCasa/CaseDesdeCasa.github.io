@@ -1,0 +1,220 @@
+/* General styles for all menus */
+.cbp-spmenu {
+	background: #47a3da;
+	position: fixed;
+}
+
+.cbp-spmenu h3 {
+	color: #afdefa;
+	font-size: 1.9em;
+	padding: 20px;
+	margin: 0;
+	font-weight: 300;
+	background: #0d77b6;
+}
+
+/*Pantallas Pequeñas*/
+@media only screen { 
+  .cbp-spmenu h3 {
+    font-size: 0.75rem;
+    padding-left: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .cbp-spmenu h3 {
+    font-size: 0.75rem;
+    padding-left: 0.5em;
+  }
+}
+
+/*Pantallas Medianas*/
+@media only screen and (min-width: 40.063em) { 
+  .cbp-spmenu h3 {
+    font-size: 1.9em;
+	padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .cbp-spmenu h3 {
+    font-size: 1.9em;
+	padding: 20px;
+  }
+}
+
+/*Pantallas Grandes*/
+@media only screen and (min-width: 64.063em) {
+  .cbp-spmenu h3 {
+    font-size: 1.9em;
+	padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .cbp-spmenu h3 {
+    font-size: 1.9em;
+	padding: 20px;
+  }
+}
+
+.cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.cbp-spmenu .siHover:hover {
+	background: #258ecd;
+}
+
+.cbp-spmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	border-bottom: 1px solid #258ecd;
+	padding: 1em;
+}
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 118px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal h4 {
+	margin-bottom: 0;
+	padding-bottom: 0.2em;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 26.6%;
+	padding: 1.2em 1.2em 2em 1.2em;
+	border-left: 1px solid #258ecd;
+}
+
+.cbp-spmenu-horizontal span {
+	font-size: 1em;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -240px;
+}
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -240px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 63px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+
+	.cbp-spmenu-right {
+		right: -190px;
+	}
+
+	.cbp-spmenu-push-toright {
+		left: 190px;
+	}
+}

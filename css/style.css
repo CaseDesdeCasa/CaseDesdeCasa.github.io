@@ -4,6 +4,10 @@
 @import url(http://fonts.googleapis.com/css?family=Vast+Shadow);
 @import url(http://fonts.googleapis.com/css?family=Coming+Soon);
 
+html {
+  background: url(../img/dark_dotted.png) repeat #222;
+}
+
 /* icomoon */
 @font-face {
         font-family: 'icomoon';
@@ -42,6 +46,44 @@
 	font-size: 4em;
 	line-height: 2em;
 	margin: 0 auto;
+}
+
+.icon-social-fac,
+.icon-social-twi,
+.icon-social-ins {
+  position: absolute;
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.1);
+  color: #fff;
+  text-align: center;
+  font-size: 4em;
+  line-height: 2em;
+  margin: 0;
+}
+
+.icon-social-fac {
+  right: 14rem;
+}
+
+.icon-social-twi {
+  right: 9rem;
+}
+
+.icon-social-ins {
+  right: 4rem;
+}
+
+.icon-social-fac:hover {
+  color: #3A5898;
+}
+.icon-social-twi:hover {
+  color: #01BAF5;
+}
+.icon-social-ins:hover {
+  color: #AE8566;
 }
 
 /* -------- icomoon --------- */
@@ -237,3 +279,12 @@ header {
   .label h1 {
     padding-bottom: 0;
   }
+
+.modalHolder p {
+  color: #2C3E50;
+  padding: 0.5rem 0.5rem;
+  margin: 1rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-align: justify;
+}

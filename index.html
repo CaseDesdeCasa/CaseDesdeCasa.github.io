@@ -6,24 +6,70 @@
   <title>Case desde Casa</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/modernizr.js"></script>
+  <link rel="stylesheet" href="css/default.css" />
+  <link rel="stylesheet" href="css/component.css" />
 </head>
 <body>
-
   <nav class="top-bar">
     <ul class="title-area">
-      <li class="name"><h1><a id="home-scroll" href="index.html">CaseDesdeCasa</a></h1></li>
+      <li class="name"><h1><a id="home-scroll">CaseDesdeCasa</a></h1></li>
     </ul>
     <section class="top-bar-section">
-      <ul class="right">
-        <li><a href="#" id="sobreNosotros">Sobre Nosotros</a></li>
+      <ul class="right active">
+        <!-- <li><a href="#" id="sobreNosotros">Sobre Nosotros</a></li>
         <li class="divider"></li>
-        <li><a href="#" id="contacto">Contacto</a></li>
-        <li class="divider"></li>
+        <li><a href="#" id="contacto">Contacto</a></li> 
+        <li class="divider"></li> -->
         <li class="has-form"><a id="empezar" class="button round" href="#">¡Empezar!</a></li>
       </ul>
     </section>
   </nav>
+
+  <nav class="cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-bottom" id="cbp-spmenu-s4">
+    <h3 id="contacto">Contacto</h3>
+    <a id="ventas" class="siHover" href="#" data-reveal-id="ventasModal"><h4>Ventas</h4><div class="show-for-medium-up">ventas@casedesdecasa.com.pe</div></a>
+    <a class="siHover" href="#"><h4>Soporte</h4><div class="show-for-medium-up">soporte@casedesdecasa.com.pe</div></a>
+    <a href="#" style="padding-bottom: 3em;"><h4>Social</h4>
+      <div style="width: 100%; margin: 0;" class="show-for-medium-up">
+        <div style="width: 30%;">
+          <span aria-hidden="true" data-icon="&#xe601;" class="icon-social-fac"></span>
+        </div>
+        <div style="width: 30%;">
+          <span aria-hidden="true" data-icon="&#xe602;" class="icon-social-twi"></span>
+        </div>
+        <div style="width: 30%;">
+          <span aria-hidden="true" data-icon="&#xe600;" class="icon-social-ins"</span>
+        </div>
+      </div>  
+    </a>    
+  </nav>
+
+  <div id="ventasModal" class="reveal-modal small" data-reveal>
+    <p class="lead">Para realizar una compra es necesario que nos dejes tus datos.</p>
+    <p class="sub">Nuestro Equipo de Ventas se pondrá en contacto contigo de inmediato.</p>
+    <form data-abide>
+      <div>
+        <div class="row collapse">
+          <div class="small-12 medium-6 medium-centered large-6 large-centered columns">
+            <input type="text" required placeholder="Nombre Completo">
+            <small class="error">¡ Necesitamos tu Nombre !</small>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-12 medium-6 medium-centered large-6 large-centered columns">
+            <input type="email" required placeholder="Email">
+            <small class="error">¡ Email inválido !</small>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-8 small-centered medium-4 medium-centered large-4 large-centered columns">
+            <button type="submit" class="button postfix">¡ Deseo Comprar !</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
 
   <!-- ........... CABECERA ............. -->
 
@@ -74,10 +120,10 @@
         <div class="row">
           <div class="small-12 text-center columns">
             <h2>¿Qué encontrarás aquí?</h2>
-            <h4>Te ofrecemos distintos modelos de Case para tu iPhone, buscando no solamente mantenerlo protegido sino también diferenciarlo y que lleve
+            <h4>Te ofrecemos distintos modelos de Case para iPhone, buscando no solamente mantenerlo protegido sino también diferenciarlo y que lleve
               algo de tu propio estilo y personalidad.</h4>
             <h4>
-              Empecemos!
+              ¡ Empecemos !
             </h4>
           </div>
         </div>
@@ -250,7 +296,11 @@
   <script src="js/foundation.min.js"></script>
   <script src="js/foundation/foundation.js"></script>
   <script src="js/foundation/foundation.magellan.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
   <script src="js/curvycorners.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/modernizr.js"></script>
   <script>
   $(document).foundation()
   .ready(function() {
@@ -259,6 +309,10 @@
     $('#iphone5').click(function(){ scrollToElement('#I5SC1001'); });
     $('#empezar').click(function(){ scrollToElement('#iphone4-scroll'); });
     $('#quieroCase').click(function(){ scrollToElement('#iphone4-scroll'); });
+    $('#home-scroll').click(function(){ bottomMenu(this); });
+    $('#contacto').click(function(){ bottomMenu(this); });
+
+    $('.icon-social-fac').click(function(){ window.open('https://www.facebook.com/pages/Case-Desde-Casa/1407652292814610', '_blank') });
   });
   $(window)
   .load(function() {

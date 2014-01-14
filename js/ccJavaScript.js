@@ -25,3 +25,25 @@ function scrollToElement( target ) {
     });
     return false;
 }
+
+function bottomMenu(obj) {
+    var menuBottom = document.getElementById( 'cbp-spmenu-s4' );
+    classie.toggle( obj, 'active' );
+    classie.toggle( menuBottom, 'cbp-spmenu-open' );
+    disableOther( 'showBottom' );
+}
+
+function disableOther( button ) {        
+    if( button !== 'showBottom' ) {
+      classie.toggle( showBottom, 'disabled' );
+    }
+}
+
+$('#ventasModal')
+  .on('invalid', function () {
+    var invalid_fields = $(this).find('[data-invalid]');
+    console.log(invalid_fields);
+  })
+  .on('valid', function () {
+    console.log('valid!');
+  });
