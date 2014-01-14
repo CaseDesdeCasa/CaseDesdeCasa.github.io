@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 @import url(http://fonts.googleapis.com/css?family=Vast+Shadow);
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
 
 /* icomoon */
 @font-face {
@@ -53,12 +54,62 @@
 	color: #FF7C00;
 }
 header {
-	background: #F59C00;
+	background: #F39C12;
 	background-size: cover;
 	padding: 22px 0;
 	/*background-repeat: repeat-x;	
 	height: 400px;*/
 }
+.titulo {
+  font-family: 'Lobster', sans-serif;
+  color: #2C3E50;
+}
+
+/*Pantallas Pequeñas*/
+@media only screen { 
+  .titulo {
+    padding: 2rem 0 3rem 0;
+    font-size: 2.75rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .titulo {
+    padding: 2rem 0 3rem 0;
+    font-size: 2.75rem;
+  }
+}
+
+/*Pantallas Medianas*/
+@media only screen and (min-width: 40.063em) { 
+  .titulo {
+    font-size: 5.12rem;
+    padding: 4rem 0 5rem 0;
+  }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .titulo {
+    font-size: 5.12rem;
+    padding: 4rem 0 5rem 0;
+  }
+}
+
+/*Pantallas Grandes*/
+@media only screen and (min-width: 64.063em) {
+  .titulo {
+    font-size: 5.12rem;
+    padding: 4rem 0 5rem 0;
+  }
+}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .titulo {
+    font-size: 5.12rem;
+    padding: 4rem 0 5rem 0;
+  }
+}
+
 
 .s1,
 .s2 {
