@@ -65,14 +65,14 @@
             if ($expedition.data("magellan-fixed-position") != fixed_position) {
               $expedition.data("magellan-fixed-position", fixed_position);
               if (fixed_position) {
-                $expedition.addClass('fixed');
-                $expedition.css({position:"fixed", top:0});
+                $expedition.addClass('fixedMagellan');
+                $expedition.css({position:"fixedMagellan", top:'2.8em'});
               } else {
-                $expedition.removeClass('fixed');
+                $expedition.removeClass('fixedMagellan');
                 $expedition.css({position:"", top:""});
               }
               if (fixed_position && typeof attr != 'undefined' && attr != false) {
-                $expedition.css({position:"fixed", top:attr + "px"});
+                $expedition.css({position:"fixedMagellan", top:attr + "px"});
               }
             }
           });

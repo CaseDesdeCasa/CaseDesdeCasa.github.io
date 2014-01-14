@@ -98,7 +98,7 @@ html {
 header {
 	background: #F39C12;
 	background-size: cover;
-	padding: 22px 0;
+	padding: 5em 0 0 0;
 	/*background-repeat: repeat-x;	
 	height: 400px;*/
 }
@@ -152,16 +152,10 @@ header {
   }
 }
 
-
 .s1,
 .s2 {
 	padding: 5em 2%;
 }
-
-/*.s1 {
-	background: url(../img/I5SC1003_I5SC1004_700x322.png) right;
-	background-repeat: no-repeat;
-}*/
 
 .s2 {
 	background: #1ABC9C;
@@ -287,4 +281,43 @@ header {
   font-size: 0.75rem;
   font-weight: 300;
   text-align: justify;
+}
+
+/*Pantallas Pequeñas*/
+@media only screen { 
+  .formModal {
+    height: 20em;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .formModal {
+    height: 20em;
+  }
+}
+
+/*Pantallas Medianas*/
+@media only screen and (min-width: 40.063em) { 
+  .formModal {
+    height: 13em;
+  }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .formModal {
+    height: 13em;
+  }
+}
+
+/*Pantallas Grandes*/
+@media only screen and (min-width: 64.063em) {
+  .formModal {
+    height: 13em;
+  }
+}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .formModal {
+    height: 13em;
+  }
 }

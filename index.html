@@ -10,20 +10,18 @@
   <link rel="stylesheet" href="css/component.css" />
 </head>
 <body>
-  <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name"><h1><a id="home-scroll">CaseDesdeCasa</a></h1></li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right active">
-        <!-- <li><a href="#" id="sobreNosotros">Sobre Nosotros</a></li>
-        <li class="divider"></li>
-        <li><a href="#" id="contacto">Contacto</a></li> 
-        <li class="divider"></li> -->
-        <li class="has-form"><a id="empezar" class="button round" href="#">¡Empezar!</a></li>
+  <div class="fixed">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name"><h1><a id="home-scroll">CaseDesdeCasa</a></h1></li>
       </ul>
-    </section>
-  </nav>
+      <section class="top-bar-section">
+        <ul class="right active">
+          <li class="has-form"><a id="empezar" class="button round" href="#">¡Empezar!</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 
   <nav class="cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-bottom" id="cbp-spmenu-s4">
     <h3 id="contacto">Contacto</h3>
@@ -45,7 +43,7 @@
   </nav>
 
   <div id="ventasModal" class="reveal-modal small" data-reveal>
-    <p class="lead">Para realizar una compra es necesario que nos dejes tus datos.</p>
+    <!-- <p class="lead">Para realizar una compra es necesario que nos dejes tus datos.</p>
     <p class="sub">Nuestro Equipo de Ventas se pondrá en contacto contigo de inmediato.</p>
     <form data-abide>
       <div>
@@ -67,7 +65,30 @@
           </div>
         </div>
       </div>
-    </form>
+    </form> -->
+      <div id="wufoo-z1vpixpy04xfyx9">
+        Fill out my <a href="https://casedesdecasa.wufoo.com/forms/z1vpixpy04xfyx9">online form</a>.
+        </div>
+        
+        <script type="text/javascript">var z1vpixpy04xfyx9;(function(d, t) {
+        var s = d.createElement(t), options = {
+        'userName':'casedesdecasa', 
+        'formHash':'z1vpixpy04xfyx9', 
+        'autoResize':true,
+        'height':'286',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'show', 
+        'ssl':true};
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+        s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try { 
+          z1vpixpy04xfyx9 = new WufooForm();z1vpixpy04xfyx9.initialize(options);z1vpixpy04xfyx9.display(); 
+          $('#wufooFormz1vpixpy04xfyx9').addClass('formModal');
+          } catch (e) {}};
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+        })(document, 'script');</script>
     <a class="close-reveal-modal">&#215;</a>
   </div>
 
@@ -134,7 +155,7 @@
   <div class="row s3">
     <hr>
     <div class="small-12 small-centered columns">
-      <div data-magellan-expedition="fixed">
+      <div data-magellan-expedition="fixedMagellan">
         <dl class="sub-nav">
           <dd><a id="scrollTop">¡Arriba!</a></dd>
           <dd data-magellan-arrival="iphone4"><a href="#iphone4" id="iphone4">iPhone 4/4S</a></dd>
@@ -304,7 +325,7 @@
   <script>
   $(document).foundation()
   .ready(function() {
-    $('#scrollTop').click(function(){ scrollToElement('#home-scroll'); });
+    $('#scrollTop').click(function(){ scrollToElement('body'); });
     $('#iphone4').click(function(){ scrollToElement('#I4HC1001'); });
     $('#iphone5').click(function(){ scrollToElement('#I5SC1001'); });
     $('#empezar').click(function(){ scrollToElement('#iphone4-scroll'); });
